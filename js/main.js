@@ -1,4 +1,23 @@
 "use strict";
+
+// TRY STOP PEOPLE FROM INSPECT THIS WEBSITE :)
+$(document).keydown(function (e) {
+    if (e.which === 123) {
+
+        return false;
+
+    }
+
+});
+
+$(document).bind("contextmenu", function (e) {
+    e.preventDefault();
+
+});
+
+
+// ANOTHERS THINGS
+
 var lastScroll = 0;
 
 //check for browser os
