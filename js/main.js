@@ -16,9 +16,13 @@ function SetMegamenuPosition() {
     if ($(window).width() > 991) {
         setTimeout(function () {
             var totalHeight = $('nav.navbar').outerHeight();
-            $('.mega-menu').css({top: totalHeight});
+            $('.mega-menu').css({
+                top: totalHeight
+            });
             if ($('.navbar-brand-top').length === 0)
-                $('.dropdown.simple-dropdown > .dropdown-menu').css({top: totalHeight});
+                $('.dropdown.simple-dropdown > .dropdown-menu').css({
+                    top: totalHeight
+                });
         }, 200);
     } else {
         $('.mega-menu').css('top', '');
@@ -33,10 +37,10 @@ function pad(d) {
 function isIE() {
     var ua = window.navigator.userAgent;
     var msie = ua.indexOf("MSIE ");
-    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer, return version number
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) // If Internet Explorer, return version number
     {
         return true;
-    } else  // If another browser, return 0
+    } else // If another browser, return 0
     {
         return false;
     }
@@ -61,13 +65,20 @@ function setButtonPosition() {
         var leftPosition = parseInt($('.swiper-auto-height-container .swiper-slide').css('padding-left'));
         var bottomPosition = parseInt($('.swiper-auto-height-container .swiper-slide').css('padding-bottom'));
         var bannerWidth = parseInt($('.swiper-auto-height-container .slide-banner').outerWidth());
-        $('.navigation-area').css({'left': bannerWidth + leftPosition + 'px', 'bottom': bottomPosition + 'px'});
+        $('.navigation-area').css({
+            'left': bannerWidth + leftPosition + 'px',
+            'bottom': bottomPosition + 'px'
+        });
     } else if ($(".swiper-auto-height-container").length > 0) {
-        $('.navigation-area').css({'left': '', 'bottom': ''});
+        $('.navigation-area').css({
+            'left': '',
+            'bottom': ''
+        });
     }
 }
 
 $(window).on("scroll", init_scroll_navigate);
+
 function init_scroll_navigate() {
     /*==============================================================
      One Page Main JS - START CODE
@@ -95,8 +106,8 @@ function init_scroll_navigate() {
     //background color slider Start
     /*==============================================================*/
     var $window = $(window),
-            $body = $('.bg-background-fade'),
-            $panel = $('.color-code');
+        $body = $('.bg-background-fade'),
+        $panel = $('.color-code');
     var scroll = $window.scrollTop() + ($window.height() / 2);
     $panel.each(function () {
         var $this = $(this);
@@ -134,7 +145,7 @@ function init_scroll_navigate() {
     var st = $(this).scrollTop();
     if (st > lastScroll) {
         $('.sticky').removeClass('header-appear');
-//        $('.dropdown.on').removeClass('on').removeClass('open').find('.dropdown-menu').fadeOut(100);
+        //        $('.dropdown.on').removeClass('on').removeClass('open').find('.dropdown-menu').fadeOut(100);
     } else
         $('.sticky').addClass('header-appear');
     lastScroll = st;
@@ -157,11 +168,17 @@ function parallax_text() {
                 var positionY = e.clientY;
                 positionX = Math.round(positionX / 10) - 80;
                 positionY = Math.round(positionY / 10) - 40;
-                $(this).find('.parallax-text').css({'transform': 'translate(' + positionX + 'px,' + positionY + 'px)', 'transition-duration': '0s'});
+                $(this).find('.parallax-text').css({
+                    'transform': 'translate(' + positionX + 'px,' + positionY + 'px)',
+                    'transition-duration': '0s'
+                });
             });
 
             $(document).on("mouseout", ".swiper-auto-slide .swiper-slide", function (e) {
-                $('.parallax-text').css({'transform': 'translate(0,0)', 'transition-duration': '0.5s'});
+                $('.parallax-text').css({
+                    'transform': 'translate(0,0)',
+                    'transition-duration': '0.5s'
+                });
             });
         }
     }
@@ -176,18 +193,26 @@ function parallax_text() {
 function ScrollStop() {
     return false;
 }
+
 function ScrollStart() {
     return true;
 }
+
 function validationSearchForm() {
     var error = true;
     $('#search-header input[type=text]').each(function (index) {
         if (index === 0) {
             if ($(this).val() === null || $(this).val() === "") {
-                $("#search-header").find("input:eq(" + index + ")").css({"border": "none", "border-bottom": "2px solid red"});
+                $("#search-header").find("input:eq(" + index + ")").css({
+                    "border": "none",
+                    "border-bottom": "2px solid red"
+                });
                 error = false;
             } else {
-                $("#search-header").find("input:eq(" + index + ")").css({"border": "none", "border-bottom": "2px solid #000"});
+                $("#search-header").find("input:eq(" + index + ")").css({
+                    "border": "none",
+                    "border-bottom": "2px solid #000"
+                });
             }
         }
     });
@@ -203,22 +228,34 @@ function validationSearchForm() {
 function equalizeHeight() {
     $(document).imagesLoaded(function () {
         if ($(window).width() < 768) {
-            $('.equalize').equalize({equalize: 'outerHeight', reset: true});
+            $('.equalize').equalize({
+                equalize: 'outerHeight',
+                reset: true
+            });
             $('.equalize.md-equalize-auto').children().css("height", "");
             $('.equalize.sm-equalize-auto').children().css("height", "");
             $('.equalize.xs-equalize-auto').children().css("height", "");
             return false;
         } else if ($(window).width() < 992) {
-            $('.equalize').equalize({equalize: 'outerHeight', reset: true});
+            $('.equalize').equalize({
+                equalize: 'outerHeight',
+                reset: true
+            });
             $('.equalize.md-equalize-auto').children().css("height", "");
             $('.equalize.sm-equalize-auto').children().css("height", "");
             return false;
         } else if ($(window).width() < 1199) {
-            $('.equalize').equalize({equalize: 'outerHeight', reset: true});
+            $('.equalize').equalize({
+                equalize: 'outerHeight',
+                reset: true
+            });
             $('.equalize.md-equalize-auto').children().css("height", "");
             return false;
         } else {
-            $('.equalize').equalize({equalize: 'outerHeight', reset: true});
+            $('.equalize').equalize({
+                equalize: 'outerHeight',
+                reset: true
+            });
         }
     });
 }
@@ -325,7 +362,10 @@ $(window).resize(function (event) {
     $("nav.navbar.bootsnav ul.nav").each(function () {
         $("li.dropdown", this).on("mouseenter", function (e) {
             if ($(window).width() > 991) {
-                $(this).find('.equalize').equalize({equalize: 'outerHeight', reset: true});
+                $(this).find('.equalize').equalize({
+                    equalize: 'outerHeight',
+                    reset: true
+                });
                 return false;
             }
         });
@@ -351,7 +391,10 @@ $(document).ready(function () {
     $("nav.navbar.bootsnav ul.nav").each(function () {
         $("li.dropdown", this).on("mouseenter", function () {
             if ($(window).width() > 991) {
-                $(this).find('.equalize').equalize({equalize: 'outerHeight', reset: true});
+                $(this).find('.equalize').equalize({
+                    equalize: 'outerHeight',
+                    reset: true
+                });
                 return false;
             }
         });
@@ -360,7 +403,10 @@ $(document).ready(function () {
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         var target = $(e.target).attr("href");
         if ($(window).width() > 991) {
-            $(target).find('.equalize').equalize({equalize: 'outerHeight', reset: true});
+            $(target).find('.equalize').equalize({
+                equalize: 'outerHeight',
+                reset: true
+            });
             return false;
         }
     });
@@ -390,7 +436,9 @@ $(document).ready(function () {
     });
     //Click event to scroll to top
     $(document).on('click', '.scroll-top-arrow', function () {
-        $('html, body').animate({scrollTop: 0}, 800);
+        $('html, body').animate({
+            scrollTop: 0
+        }, 800);
         return false;
     });
 
@@ -977,166 +1025,134 @@ $(document).ready(function () {
         /* update all swiper on window resize */
 
         setTimeout(function () {
-            if ($('.swiper-full-screen').length > 0 && swiperFull)
-            {
+            if ($('.swiper-full-screen').length > 0 && swiperFull) {
                 swiperFull.update();
             }
 
-            if ($('.swiper-auto-fade').length > 0 && swiperAutoFade)
-            {
+            if ($('.swiper-auto-fade').length > 0 && swiperAutoFade) {
                 swiperAutoFade.update();
             }
 
-            if ($('.swiper-slider-second').length > 0 && swiperSecond)
-            {
+            if ($('.swiper-slider-second').length > 0 && swiperSecond) {
                 swiperSecond.update();
             }
 
-            if ($('.swiper-slider-third').length > 0 && swiperThird)
-            {
+            if ($('.swiper-slider-third').length > 0 && swiperThird) {
                 swiperThird.update();
             }
 
-            if ($('.swiper-number-pagination').length > 0 && swiperNumber)
-            {
+            if ($('.swiper-number-pagination').length > 0 && swiperNumber) {
                 swiperNumber.update();
             }
 
-            if ($('.swiper-vertical-pagination').length > 0 && swiperVerticalPagination)
-            {
+            if ($('.swiper-vertical-pagination').length > 0 && swiperVerticalPagination) {
                 swiperVerticalPagination.update();
             }
 
-            if ($('.swiper-slider-clients').length > 0 && swiperClients)
-            {
+            if ($('.swiper-slider-clients').length > 0 && swiperClients) {
                 swiperClients.update();
             }
 
-            if ($('.swiper-slider-clients-second').length > 0 && swiperClients2)
-            {
+            if ($('.swiper-slider-clients-second').length > 0 && swiperClients2) {
                 swiperClients2.update();
             }
 
-            if ($('.swiper-three-slides').length > 0 && swiperThreeSlides)
-            {
+            if ($('.swiper-three-slides').length > 0 && swiperThreeSlides) {
                 swiperThreeSlides.update();
             }
 
-            if ($('.swiper-four-slides').length > 0 && swiperFourSlides)
-            {
+            if ($('.swiper-four-slides').length > 0 && swiperFourSlides) {
                 swiperFourSlides.update();
             }
 
-            if ($('.swiper-demo-header-style').length > 0 && swiperDemoHeaderStyle)
-            {
+            if ($('.swiper-demo-header-style').length > 0 && swiperDemoHeaderStyle) {
                 swiperDemoHeaderStyle.update();
             }
 
-            if ($('.swiper-auto-slide').length > 0 && swiperAutoSlide)
-            {
+            if ($('.swiper-auto-slide').length > 0 && swiperAutoSlide) {
                 swiperAutoSlide.update();
             }
 
-            if ($('.swiper-auto-height-container').length > 0 && swiperAutoHieght)
-            {
+            if ($('.swiper-auto-height-container').length > 0 && swiperAutoHieght) {
                 swiperAutoHieght.update();
             }
 
-            if ($('.swiper-multy-row-container').length > 0 && swiperMultyRow)
-            {
+            if ($('.swiper-multy-row-container').length > 0 && swiperMultyRow) {
                 swiperMultyRow.update();
             }
 
-            if ($('.swiper-blog').length > 0 && swiperBlog)
-            {
+            if ($('.swiper-blog').length > 0 && swiperBlog) {
                 swiperBlog.update();
             }
 
-            if ($('.swiper-presentation').length > 0 && swiperPresentation)
-            {
+            if ($('.swiper-presentation').length > 0 && swiperPresentation) {
                 swiperPresentation.update();
             }
 
         }, 500);
         if (isIE()) {
             setTimeout(function () {
-                if ($('.swiper-full-screen').length > 0 && swiperFull)
-                {
+                if ($('.swiper-full-screen').length > 0 && swiperFull) {
                     swiperFull.update();
                 }
 
-                if ($('.swiper-auto-fade').length > 0 && swiperAutoFade)
-                {
+                if ($('.swiper-auto-fade').length > 0 && swiperAutoFade) {
                     swiperAutoFade.update();
                 }
 
-                if ($('.swiper-slider-second').length > 0 && swiperSecond)
-                {
+                if ($('.swiper-slider-second').length > 0 && swiperSecond) {
                     swiperSecond.update();
                 }
 
-                if ($('.swiper-slider-third').length > 0 && swiperThird)
-                {
+                if ($('.swiper-slider-third').length > 0 && swiperThird) {
                     swiperThird.update();
                 }
 
-                if ($('.swiper-number-pagination').length > 0 && swiperNumber)
-                {
+                if ($('.swiper-number-pagination').length > 0 && swiperNumber) {
                     swiperNumber.update();
                 }
 
-                if ($('.swiper-vertical-pagination').length > 0 && swiperVerticalPagination)
-                {
+                if ($('.swiper-vertical-pagination').length > 0 && swiperVerticalPagination) {
                     swiperVerticalPagination.update();
                 }
 
-                if ($('.swiper-slider-clients').length > 0 && swiperClients)
-                {
+                if ($('.swiper-slider-clients').length > 0 && swiperClients) {
                     swiperClients.update();
                 }
 
-                if ($('.swiper-slider-clients-second').length > 0 && swiperClients2)
-                {
+                if ($('.swiper-slider-clients-second').length > 0 && swiperClients2) {
                     swiperClients2.update();
                 }
 
-                if ($('.swiper-three-slides').length > 0 && swiperThreeSlides)
-                {
+                if ($('.swiper-three-slides').length > 0 && swiperThreeSlides) {
                     swiperThreeSlides.update();
                 }
 
-                if ($('.swiper-four-slides').length > 0 && swiperFourSlides)
-                {
+                if ($('.swiper-four-slides').length > 0 && swiperFourSlides) {
                     swiperFourSlides.update();
                 }
 
-                if ($('.swiper-demo-header-style').length > 0 && swiperDemoHeaderStyle)
-                {
+                if ($('.swiper-demo-header-style').length > 0 && swiperDemoHeaderStyle) {
                     swiperDemoHeaderStyle.update();
                 }
 
-                if ($('.swiper-auto-slide').length > 0 && swiperAutoSlide)
-                {
+                if ($('.swiper-auto-slide').length > 0 && swiperAutoSlide) {
                     swiperAutoSlide.update();
                 }
 
-                if ($('.swiper-auto-height-container').length > 0 && swiperAutoHieght)
-                {
+                if ($('.swiper-auto-height-container').length > 0 && swiperAutoHieght) {
                     swiperAutoHieght.update();
                 }
 
-                if ($('.swiper-multy-row-container').length > 0 && swiperMultyRow)
-                {
+                if ($('.swiper-multy-row-container').length > 0 && swiperMultyRow) {
                     swiperMultyRow.update();
                 }
 
-                if ($('.swiper-blog').length > 0 && swiperBlog)
-                {
+                if ($('.swiper-blog').length > 0 && swiperBlog) {
                     swiperBlog.update();
                 }
 
-                if ($('.swiper-presentation').length > 0 && swiperPresentation)
-                {
+                if ($('.swiper-presentation').length > 0 && swiperPresentation) {
                     swiperPresentation.update();
                 }
 
@@ -1195,19 +1211,20 @@ $(document).ready(function () {
      smooth scroll
      ==============================================================*/
 
-    var scrollAnimationTime = 1200, scrollAnimation = 'easeInOutExpo';
+    var scrollAnimationTime = 1200,
+        scrollAnimation = 'easeInOutExpo';
     $(document).on('click.smoothscroll', 'a.scrollto', function (event) {
         event.preventDefault();
         var target = this.hash;
         if ($(target).length != 0) {
             $('html, body').stop()
-                    .animate({
-                        'scrollTop': $(target)
-                                .offset()
-                                .top
-                    }, scrollAnimationTime, scrollAnimation, function () {
-                        window.location.hash = target;
-                    });
+                .animate({
+                    'scrollTop': $(target)
+                        .offset()
+                        .top
+                }, scrollAnimationTime, scrollAnimation, function () {
+                    window.location.hash = target;
+                });
         }
     });
 
@@ -1224,9 +1241,9 @@ $(document).ready(function () {
                 var target = _this.attr("href");
                 if ($(target).length > 0) {
                     $('html, body').stop()
-                            .animate({
-                                'scrollTop': $(target).offset().top
-                            });
+                        .animate({
+                            'scrollTop': $(target).offset().top
+                        });
                 }
             }, 500);
         });
@@ -1369,7 +1386,9 @@ $(document).ready(function () {
             $(this).css("-ms-animation", "none");
             $(this).css("animation", "none");
         });
-        $portfolio_filter.isotope({filter: selector});
+        $portfolio_filter.isotope({
+            filter: selector
+        });
         return false;
     });
     $(window).resize(function () {
@@ -1430,7 +1449,9 @@ $(document).ready(function () {
             type: 'image',
             closeOnContentClick: true,
             closeBtnInside: false,
-            gallery: {enabled: true}
+            gallery: {
+                enabled: true
+            }
         });
     });
 
@@ -1720,6 +1741,7 @@ $(document).ready(function () {
             });
         }
     });
+
     function ValidationContactForm() {
         var error = true;
         $('#contact-form input[type=text]').each(function (index) {
@@ -1765,6 +1787,7 @@ $(document).ready(function () {
             });
         }
     });
+
     function ValidationContactForm2() {
         var error = true;
         $('#contact-form-2 input[type=text]').each(function (index) {
@@ -1809,6 +1832,7 @@ $(document).ready(function () {
             });
         }
     });
+
     function ValidationContactForm3() {
         var error = true;
         $('#contact-form-3 input[type=text]').each(function (index) {
@@ -1854,6 +1878,7 @@ $(document).ready(function () {
             });
         }
     });
+
     function ValidationProjectContactForm() {
         var error = true;
         $('#project-contact-form input[type=text]').each(function (index) {
@@ -1899,6 +1924,7 @@ $(document).ready(function () {
             });
         }
     });
+
     function ValidationProjectContactForm4() {
         var error = true;
         $('#project-contact-form-4 input[type=text]').each(function (index) {
@@ -1944,8 +1970,10 @@ $(document).ready(function () {
     $(function ($) {
         animatecounters();
     });
+
     function animatecounters() {
         $('.timer').each(count);
+
         function count(options) {
             var $this = $(this);
             options = $.extend({}, options || {}, $this.data('countToOptions') || {});
@@ -2016,8 +2044,8 @@ $(document).ready(function () {
     });
 
     var menuRight = document.getElementById('cbp-spmenu-s2'),
-            showRightPush = document.getElementById('showRightPush'),
-            body = document.body;
+        showRightPush = document.getElementById('showRightPush'),
+        body = document.body;
     if (showRightPush) {
         showRightPush.onclick = function () {
             classie.toggle(this, 'active');
@@ -2224,8 +2252,7 @@ $(document).ready(function () {
             sliderLayout: "fullscreen",
             dottedOverlay: "none",
             delay: 9000,
-            navigation: {
-            },
+            navigation: {},
             responsiveLevels: [1240, 1024, 778, 480],
             visibilityLevels: [1240, 1024, 778, 480],
             gridwidth: [1240, 1024, 778, 480],
@@ -2280,8 +2307,7 @@ $(document).ready(function () {
                     swipe_min_touches: 1,
                     swipe_direction: "horizontal",
                     drag_block_vertical: false
-                }
-                ,
+                },
                 arrows: {
                     style: "zeus",
                     enable: true,
@@ -2303,8 +2329,7 @@ $(document).ready(function () {
                         h_offset: 30,
                         v_offset: 0
                     }
-                }
-                ,
+                },
                 bullets: {
                     enable: true,
                     hide_onmobile: false,
@@ -2397,7 +2422,10 @@ $(document).ready(function () {
                     $('#search-header input[type=text]').each(function (index) {
                         if (index == 0) {
                             $(this).val('');
-                            $("#search-header").find("input:eq(" + index + ")").css({"border": "none", "border-bottom": "2px solid rgba(255,255,255,0.5)"});
+                            $("#search-header").find("input:eq(" + index + ")").css({
+                                "border": "none",
+                                "border-bottom": "2px solid rgba(255,255,255,0.5)"
+                            });
                         }
                     });
                     document.onmousewheel = ScrollStart;
@@ -2420,9 +2448,15 @@ $(document).ready(function () {
 
     $("input.search-input").on("keyup", function (event) {
         if ($(this).val() == null || $(this).val() == "") {
-            $(this).css({"border": "none", "border-bottom": "2px solid red"});
+            $(this).css({
+                "border": "none",
+                "border-bottom": "2px solid red"
+            });
         } else {
-            $(this).css({"border": "none", "border-bottom": "2px solid rgba(255,255,255,0.5)"});
+            $(this).css({
+                "border": "none",
+                "border-bottom": "2px solid rgba(255,255,255,0.5)"
+            });
         }
     });
 
@@ -2543,8 +2577,7 @@ $(document).ready(function () {
      touchstart click
      ====================================== */
     $('body').on('touchstart click', function (e) {
-        if ($(window).width() < 992) {
-        }
+        if ($(window).width() < 992) {}
     });
 
     /*==============================================================*/
@@ -2675,7 +2708,9 @@ $(document).ready(function () {
         clearOpen();
     });
 
-    var getNav = $("nav.navbar.bootsnav"), getIn = getNav.find("ul.nav").data("in"), getOut = getNav.find("ul.nav").data("out");
+    var getNav = $("nav.navbar.bootsnav"),
+        getIn = getNav.find("ul.nav").data("in"),
+        getOut = getNav.find("ul.nav").data("out");
     // Hidden dropdown
     function clearOpen() {
         $('li.dropdown').removeClass("on").removeClass("open");
@@ -2699,16 +2734,16 @@ $(window).load(function () {
         setTimeout(function () {
             $(window).imagesLoaded(function () {
                 var scrollAnimationTime = 1200,
-                        scrollAnimation = 'easeInOutExpo';
+                    scrollAnimation = 'easeInOutExpo';
                 var target = '#' + hash;
                 if ($(target).length > 0) {
 
                     $('html, body').stop()
-                            .animate({
-                                'scrollTop': $(target).offset().top
-                            }, scrollAnimationTime, scrollAnimation, function () {
-                                window.location.hash = target;
-                            });
+                        .animate({
+                            'scrollTop': $(target).offset().top
+                        }, scrollAnimationTime, scrollAnimation, function () {
+                            window.location.hash = target;
+                        });
                 }
             });
         }, 500);
@@ -2719,3 +2754,550 @@ $(window).load(function () {
 /* ===================================
  END Page Load
  ====================================== */
+
+
+
+/* ===================================
+001
+ ====================================== */
+
+
+
+
+// settings
+var DEFAULTS = {
+    borderColor: "#F7F7F7",
+    playedColor: "#ffffff",
+    backgroundColor: "rgba(254,65,104,.2)",
+    iconColor: "#ffffff",
+    borderWidth: 2,
+    size: 48,
+    className: 'circle-audio-player'
+};
+
+// reused values
+var pi = Math.PI;
+var doublePi = pi * 2;
+var arcOffset = -pi / 2;
+var animTime = 200;
+var loaderTime = 1800;
+
+var CircleAudioPlayer = function (options) {
+    options = options || {};
+    for (var property in DEFAULTS) {
+        this[property] = options[property] || DEFAULTS[property];
+    }
+
+    // create some things we need
+    this._canvas = document.createElement('canvas');
+    this._canvas.setAttribute('class', this.className + ' is-loading');
+    this._canvas.addEventListener('mousedown', (function () {
+        if (this.playing) {
+            this.pause();
+        } else {
+            this.play();
+        }
+    }).bind(this));
+    this._ctx = this._canvas.getContext('2d');
+
+    // set up initial stuff
+    this.setAudio(options.audio);
+    this.setSize(this.size);
+
+    // redraw loop
+    (function cAPAnimationLoop(now) {
+        // check if we need to update anything
+        if (this.animating) {
+            this._updateAnimations(now);
+        }
+        if (this._forceDraw || this.playing || this.animating || this.loading) {
+            this._draw();
+            this._forceDraw = false;
+        }
+
+        requestAnimationFrame(cAPAnimationLoop.bind(this));
+    }).call(this, new Date().getTime());
+};
+CircleAudioPlayer.prototype = {
+    // private methods
+    _animateIcon: function (to, from) {
+        // define a few things the first time
+        this._animationProps = {
+            animStart: null,
+            from: from,
+            to: to
+        };
+        if (from) {
+            this.animating = true;
+        } else {
+            this._animationProps.current = this._icons[to].slice();
+            this.draw();
+        }
+    },
+    _updateAnimations: function (now) {
+        this._animationProps.animStart = this._animationProps.animStart || now;
+        var deltaTime = now - this._animationProps.animStart;
+        var perc = (1 - Math.cos(deltaTime / animTime * pi / 2));
+        if (deltaTime >= animTime) {
+            this.animating = false;
+            perc = 1;
+            this._animationProps.current = this._icons[this._animationProps.to].slice();
+            this.draw();
+        } else {
+            var from = this._icons[this._animationProps.from];
+            var current = [];
+            for (var i = 0; i < from.length; i++) {
+                current.push([]);
+                for (var j = 0; j < from[i].length; j++) {
+                    current[i].push([]);
+                    var to = this._icons[this._animationProps.to][i][j];
+                    current[i][j][0] = from[i][j][0] + (to[0] - from[i][j][0]) * perc;
+                    current[i][j][1] = from[i][j][1] + (to[1] - from[i][j][1]) * perc;
+                }
+            }
+            this._animationProps.current = current;
+        }
+    },
+    _draw: function (progress) {
+        // common settings
+        if (isNaN(progress)) {
+            progress = this.audio.currentTime / this.audio.duration || 0;
+        }
+
+        // clear existing
+        this._ctx.clearRect(0, 0, this.size, this.size);
+
+        // draw bg
+        this._ctx.beginPath();
+        this._ctx.arc(this._halfSize, this._halfSize, this._halfSize - (this.borderWidth / 2), 0, doublePi);
+        this._ctx.closePath();
+        this._ctx.fillStyle = this.backgroundColor;
+        this._ctx.fill();
+
+        // draw border
+        // our active path is already the full circle, so just stroke it
+        this._ctx.lineWidth = this.borderWidth;
+        this._ctx.strokeStyle = this.borderColor;
+        this._ctx.stroke();
+
+        // play progress
+        if (progress > 0) {
+            this._ctx.beginPath();
+            this._ctx.arc(this._halfSize, this._halfSize, this._halfSize - (this.borderWidth / 2), arcOffset, arcOffset + doublePi * progress);
+            this._ctx.strokeStyle = this.playedColor;
+            this._ctx.stroke();
+        }
+
+        // icons
+        this._ctx.fillStyle = this.iconColor;
+        if (this.loading) {
+            var loaderOffset = -Math.cos((new Date().getTime() % (loaderTime)) / (loaderTime) * pi) * doublePi - (pi / 3) - (pi / 2);
+            this._ctx.beginPath();
+            this._ctx.arc(this._halfSize, this._halfSize, this._halfSize / 3, loaderOffset, loaderOffset + pi / 3 * 2);
+            this._ctx.strokeStyle = this.iconColor;
+            this._ctx.stroke();
+        } else {
+            this._ctx.beginPath();
+            var icon = (this._animationProps && this._animationProps.current) || this._icons.play;
+            for (var i = 0; i < icon.length; i++) {
+                this._ctx.moveTo(icon[i][0][0], icon[i][0][1]);
+
+                for (var j = 1; j < icon[i].length; j++) {
+                    this._ctx.lineTo(icon[i][j][0], icon[i][j][1]);
+                }
+            }
+
+            // this._ctx.closePath();
+            this._ctx.fill();
+            // stroke to fill in for retina
+            this._ctx.strokeStyle = this.iconColor;
+            this._ctx.lineWidth = 2;
+            this._ctx.lineJoin = 'miter';
+            this._ctx.stroke();
+        }
+    },
+    _setState: function (state) {
+        this.playing = false;
+        this.loading = false;
+        if (state === 'playing') {
+            this.playing = true;
+            this._animateIcon('pause', 'play');
+        } else if (state === 'loading') {
+            this.loading = true;
+        } else if (this.state !== 'loading') {
+            this._animateIcon('play', 'pause');
+        } else {
+            this._animateIcon('play', null);
+        }
+        this.state = state;
+        this._canvas.setAttribute('class', this.className + ' is-' + state);
+        this.draw();
+    },
+    // public methods
+    draw: function () {
+        this._forceDraw = true;
+    },
+    setSize: function (size) {
+        this.size = size;
+        this._halfSize = size / 2; // we do this a lot. it's not heavy, but why repeat?
+        this._canvas.width = size;
+        this._canvas.height = size;
+        // set icon paths
+        var iconSize = this.size / 2;
+        var pauseGap = iconSize / 10;
+        var playLeft = Math.cos(pi / 3 * 2) * (iconSize / 2) + this._halfSize;
+        var playRight = iconSize / 2 + this._halfSize;
+        var playHalf = (playRight - playLeft) / 2 + playLeft;
+        var top = this._halfSize - Math.sin(pi / 3 * 2) * (iconSize / 2);
+        var bottom = this.size - top;
+        var pauseLeft = this._halfSize - iconSize / 3;
+        var pauseRight = this.size - pauseLeft;
+        this._icons = {
+            play: [
+				[
+					[playLeft, top],
+					[playHalf, (this._halfSize - top) / 2 + top],
+					[playHalf, (this._halfSize - top) / 2 + this._halfSize],
+					[playLeft, bottom]
+				],
+				[
+					[playHalf, (this._halfSize - top) / 2 + top],
+					[playRight, this._halfSize],
+					[playRight, this._halfSize],
+					[playHalf, (this._halfSize - top) / 2 + this._halfSize]
+				]
+			],
+            pause: [
+				[
+					[pauseLeft, top + pauseGap],
+					[this._halfSize - pauseGap, top + pauseGap],
+					[this._halfSize - pauseGap, bottom - pauseGap],
+					[pauseLeft, bottom - pauseGap]
+				],
+				[
+					[this._halfSize + pauseGap, top + pauseGap],
+					[pauseRight, top + pauseGap],
+					[pauseRight, bottom - pauseGap],
+					[this._halfSize + pauseGap, bottom - pauseGap]
+				]
+			]
+        };
+
+        if (this._animationProps && this._animationProps.current) {
+            this._animateIcon(this._animationProps.to);
+        }
+        if (!this.playing) {
+            this.draw();
+        }
+    },
+    setAudio: function (audioUrl) {
+        this.audio = new Audio(audioUrl);
+        this._setState('loading');
+
+        this.audio.addEventListener('canplaythrough', (function () {
+            this._setState('paused');
+        }).bind(this));
+        this.audio.addEventListener('play', (function () {
+            this._setState('playing');
+        }).bind(this));
+        this.audio.addEventListener('pause', (function () {
+            // reset when finished
+            if (this.audio.currentTime === this.audio.duration) {
+                this.audio.currentTime = 0;
+            }
+            this._setState('paused');
+        }).bind(this));
+    },
+    appendTo: function (element) {
+        element.appendChild(this._canvas);
+    },
+    play: function () {
+        this.audio.play();
+    },
+    pause: function () {
+        this.audio.pause();
+    }
+};
+
+
+// now init one as an example
+var cap = new CircleAudioPlayer({
+    audio: 'sound/001.mp3',
+    size: 45,
+    borderWidth: 5,
+});
+cap.appendTo(playerContainer);
+
+
+
+
+/* ===================================
+002
+ ====================================== */
+
+
+
+
+// settings
+var DEFAULTS = {
+    borderColor: "#F7F7F7",
+    playedColor: "#ffffff",
+    backgroundColor: "rgba(254,65,104,.2)",
+    iconColor: "#ffffff",
+    borderWidth: 2,
+    size: 48,
+    className: 'circle-audio-player'
+};
+
+// reused values
+var pi = Math.PI;
+var doublePi = pi * 2;
+var arcOffset = -pi / 2;
+var animTime = 200;
+var loaderTime = 1800;
+
+var CircleAudioPlayer = function (options) {
+    options = options || {};
+    for (var property in DEFAULTS) {
+        this[property] = options[property] || DEFAULTS[property];
+    }
+
+    // create some things we need
+    this._canvas = document.createElement('canvas');
+    this._canvas.setAttribute('class', this.className + ' is-loading');
+    this._canvas.addEventListener('mousedown', (function () {
+        if (this.playing) {
+            this.pause();
+        } else {
+            this.play();
+        }
+    }).bind(this));
+    this._ctx = this._canvas.getContext('2d');
+
+    // set up initial stuff
+    this.setAudio(options.audio);
+    this.setSize(this.size);
+
+    // redraw loop
+    (function cAPAnimationLoop(now) {
+        // check if we need to update anything
+        if (this.animating) {
+            this._updateAnimations(now);
+        }
+        if (this._forceDraw || this.playing || this.animating || this.loading) {
+            this._draw();
+            this._forceDraw = false;
+        }
+
+        requestAnimationFrame(cAPAnimationLoop.bind(this));
+    }).call(this, new Date().getTime());
+};
+CircleAudioPlayer.prototype = {
+    // private methods
+    _animateIcon: function (to, from) {
+        // define a few things the first time
+        this._animationProps = {
+            animStart: null,
+            from: from,
+            to: to
+        };
+        if (from) {
+            this.animating = true;
+        } else {
+            this._animationProps.current = this._icons[to].slice();
+            this.draw();
+        }
+    },
+    _updateAnimations: function (now) {
+        this._animationProps.animStart = this._animationProps.animStart || now;
+        var deltaTime = now - this._animationProps.animStart;
+        var perc = (1 - Math.cos(deltaTime / animTime * pi / 2));
+        if (deltaTime >= animTime) {
+            this.animating = false;
+            perc = 1;
+            this._animationProps.current = this._icons[this._animationProps.to].slice();
+            this.draw();
+        } else {
+            var from = this._icons[this._animationProps.from];
+            var current = [];
+            for (var i = 0; i < from.length; i++) {
+                current.push([]);
+                for (var j = 0; j < from[i].length; j++) {
+                    current[i].push([]);
+                    var to = this._icons[this._animationProps.to][i][j];
+                    current[i][j][0] = from[i][j][0] + (to[0] - from[i][j][0]) * perc;
+                    current[i][j][1] = from[i][j][1] + (to[1] - from[i][j][1]) * perc;
+                }
+            }
+            this._animationProps.current = current;
+        }
+    },
+    _draw: function (progress) {
+        // common settings
+        if (isNaN(progress)) {
+            progress = this.audio.currentTime / this.audio.duration || 0;
+        }
+
+        // clear existing
+        this._ctx.clearRect(0, 0, this.size, this.size);
+
+        // draw bg
+        this._ctx.beginPath();
+        this._ctx.arc(this._halfSize, this._halfSize, this._halfSize - (this.borderWidth / 2), 0, doublePi);
+        this._ctx.closePath();
+        this._ctx.fillStyle = this.backgroundColor;
+        this._ctx.fill();
+
+        // draw border
+        // our active path is already the full circle, so just stroke it
+        this._ctx.lineWidth = this.borderWidth;
+        this._ctx.strokeStyle = this.borderColor;
+        this._ctx.stroke();
+
+        // play progress
+        if (progress > 0) {
+            this._ctx.beginPath();
+            this._ctx.arc(this._halfSize, this._halfSize, this._halfSize - (this.borderWidth / 2), arcOffset, arcOffset + doublePi * progress);
+            this._ctx.strokeStyle = this.playedColor;
+            this._ctx.stroke();
+        }
+
+        // icons
+        this._ctx.fillStyle = this.iconColor;
+        if (this.loading) {
+            var loaderOffset = -Math.cos((new Date().getTime() % (loaderTime)) / (loaderTime) * pi) * doublePi - (pi / 3) - (pi / 2);
+            this._ctx.beginPath();
+            this._ctx.arc(this._halfSize, this._halfSize, this._halfSize / 3, loaderOffset, loaderOffset + pi / 3 * 2);
+            this._ctx.strokeStyle = this.iconColor;
+            this._ctx.stroke();
+        } else {
+            this._ctx.beginPath();
+            var icon = (this._animationProps && this._animationProps.current) || this._icons.play;
+            for (var i = 0; i < icon.length; i++) {
+                this._ctx.moveTo(icon[i][0][0], icon[i][0][1]);
+
+                for (var j = 1; j < icon[i].length; j++) {
+                    this._ctx.lineTo(icon[i][j][0], icon[i][j][1]);
+                }
+            }
+
+            // this._ctx.closePath();
+            this._ctx.fill();
+            // stroke to fill in for retina
+            this._ctx.strokeStyle = this.iconColor;
+            this._ctx.lineWidth = 2;
+            this._ctx.lineJoin = 'miter';
+            this._ctx.stroke();
+        }
+    },
+    _setState: function (state) {
+        this.playing = false;
+        this.loading = false;
+        if (state === 'playing') {
+            this.playing = true;
+            this._animateIcon('pause', 'play');
+        } else if (state === 'loading') {
+            this.loading = true;
+        } else if (this.state !== 'loading') {
+            this._animateIcon('play', 'pause');
+        } else {
+            this._animateIcon('play', null);
+        }
+        this.state = state;
+        this._canvas.setAttribute('class', this.className + ' is-' + state);
+        this.draw();
+    },
+    // public methods
+    draw: function () {
+        this._forceDraw = true;
+    },
+    setSize: function (size) {
+        this.size = size;
+        this._halfSize = size / 2; // we do this a lot. it's not heavy, but why repeat?
+        this._canvas.width = size;
+        this._canvas.height = size;
+        // set icon paths
+        var iconSize = this.size / 2;
+        var pauseGap = iconSize / 10;
+        var playLeft = Math.cos(pi / 3 * 2) * (iconSize / 2) + this._halfSize;
+        var playRight = iconSize / 2 + this._halfSize;
+        var playHalf = (playRight - playLeft) / 2 + playLeft;
+        var top = this._halfSize - Math.sin(pi / 3 * 2) * (iconSize / 2);
+        var bottom = this.size - top;
+        var pauseLeft = this._halfSize - iconSize / 3;
+        var pauseRight = this.size - pauseLeft;
+        this._icons = {
+            play: [
+				[
+					[playLeft, top],
+					[playHalf, (this._halfSize - top) / 2 + top],
+					[playHalf, (this._halfSize - top) / 2 + this._halfSize],
+					[playLeft, bottom]
+				],
+				[
+					[playHalf, (this._halfSize - top) / 2 + top],
+					[playRight, this._halfSize],
+					[playRight, this._halfSize],
+					[playHalf, (this._halfSize - top) / 2 + this._halfSize]
+				]
+			],
+            pause: [
+				[
+					[pauseLeft, top + pauseGap],
+					[this._halfSize - pauseGap, top + pauseGap],
+					[this._halfSize - pauseGap, bottom - pauseGap],
+					[pauseLeft, bottom - pauseGap]
+				],
+				[
+					[this._halfSize + pauseGap, top + pauseGap],
+					[pauseRight, top + pauseGap],
+					[pauseRight, bottom - pauseGap],
+					[this._halfSize + pauseGap, bottom - pauseGap]
+				]
+			]
+        };
+
+        if (this._animationProps && this._animationProps.current) {
+            this._animateIcon(this._animationProps.to);
+        }
+        if (!this.playing) {
+            this.draw();
+        }
+    },
+    setAudio: function (audioUrl) {
+        this.audio = new Audio(audioUrl);
+        this._setState('loading');
+
+        this.audio.addEventListener('canplaythrough', (function () {
+            this._setState('paused');
+        }).bind(this));
+        this.audio.addEventListener('play', (function () {
+            this._setState('playing');
+        }).bind(this));
+        this.audio.addEventListener('pause', (function () {
+            // reset when finished
+            if (this.audio.currentTime === this.audio.duration) {
+                this.audio.currentTime = 0;
+            }
+            this._setState('paused');
+        }).bind(this));
+    },
+    appendTo: function (element) {
+        element.appendChild(this._canvas);
+    },
+    play: function () {
+        this.audio.play();
+    },
+    pause: function () {
+        this.audio.pause();
+    }
+};
+
+
+// now init one as an example
+var cap = new CircleAudioPlayer({
+    audio: 'sound/001.mp3',
+    size: 45,
+    borderWidth: 5,
+});
+cap.appendTo(playerContainer2);
