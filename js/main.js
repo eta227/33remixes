@@ -3040,9 +3040,9 @@ cap.appendTo(playerContainer);
 
 // settings
 var DEFAULTS = {
-    borderColor: "#F7F7F7",
+    borderColor: "#EDEDED",
     playedColor: "#ffffff",
-    backgroundColor: "rgba(254,65,104,.2)",
+    backgroundColor: "rgba(254,65,104,.3)",
     iconColor: "#ffffff",
     borderWidth: 2,
     size: 48,
