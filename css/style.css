@@ -9119,7 +9119,7 @@ footer .small-icon li {
 
 .mfp-arrow-right:before {
     border-left: none;
-    content: "\e628";
+    background: #DE264B;
     font-size: 2em;
     font-family: 'themify';
     color: #fff;
@@ -9127,7 +9127,7 @@ footer .small-icon li {
 
 .mfp-arrow-left:before {
     border-right: none;
-    content: "\e629";
+    background: #DE264B;
     font-size: 2em;
     font-family: 'themify';
     color: #fff;
@@ -12421,39 +12421,39 @@ header.sticky nav.navbar.brand-center ul.nav>li>a {
 
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
+    background-image: url("data:image/arrow-next-light-dark.png");
     right: 10px;
     left: auto;
 }
 
 .swiper-button-prev.swiper-button-white,
 .swiper-container-rtl .swiper-button-next.swiper-button-white {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+    background-image: url("data:image/arrow-next-light-dark.png");
 }
 
 .swiper-button-next.swiper-button-white,
 .swiper-container-rtl .swiper-button-prev.swiper-button-white {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+    background-image: url("data:image/arrow-next-light-dark.png");
 }
 
 .swiper-button-next.swiper-button-black,
 .swiper-container-rtl .swiper-button-prev.swiper-button-black {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
+    background-image: url("data:image/arrow-next-light-dark.png");
 }
 
 .swiper-button-prev.swiper-button-black,
 .swiper-container-rtl .swiper-button-next.swiper-button-black {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
+    background-image: url("data:image/arrow-next-light-dark.png");
 }
 
 .swiper-button-prev.swiper-button-white-highlight,
 .swiper-container-rtl .swiper-button-next.swiper-button-white-highlight {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+    background-image: url("data:image/arrow-next-light-dark.png");
 }
 
 .swiper-button-next.swiper-button-white-highlight,
 .swiper-container-rtl .swiper-button-prev.swiper-button-white-highlight {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+    background-image: url("data:image/arrow-next-light-dark.png");
 }
 
 .swiper-button-next.swiper-button-white-highlight,
@@ -12469,12 +12469,12 @@ header.sticky nav.navbar.brand-center ul.nav>li>a {
 
 .swiper-button-next.swiper-button-black-highlight,
 .swiper-container-rtl .swiper-button-prev.swiper-button-black-highlight {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
+    background-image: url("data:image/arrow-next-light-dark.png");
 }
 
 .swiper-button-prev.swiper-button-black-highlight,
 .swiper-container-rtl .swiper-button-next.swiper-button-black-highlight {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
+    background-image: url("data:image/arrow-next-light-dark.png");
 }
 
 .swiper-button-next.swiper-button-black-highlight,
@@ -12497,11 +12497,11 @@ header.sticky nav.navbar.brand-center ul.nav>li>a {
 }
 
 .swiper-fullscreen-next {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
+    background-image: url("data:image/arrow-next-light-dark.png");
 }
 
 .swiper-fullscreen-prev {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
+    background-image: url("data:image/arrow-next-light-dark.png");
 }
 
 .swiper-fullscreen-next,
@@ -17008,8 +17008,8 @@ a img.aligncenter {
 
 .scroll-top-arrow,
 .scroll-top-arrow:focus {
-    color: #fff;
-    background: #878787;
+    color: #FDE1FD;
+    background: #FDE1FD;
     line-height: 28px;
     display: none;
     height: 30px;
@@ -17025,7 +17025,7 @@ a img.aligncenter {
 }
 
 .scroll-top-arrow:hover {
-    background: #000;
+    background: #FC2059;
     opacity: .8;
     color: #fff;
     border-color: #ff214f
@@ -17940,9 +17940,30 @@ a {
     margin: 0 auto;
     cursor: pointer;
     position: absolute;
-    left: 40px;
+    left: 30px;
 }
 
 #playerContainer {
     padding: 0px;
+}
+
+.size-36 {
+    font-size: 36px;
+}
+
+#element1 {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#element2 {
+    display: inline-block;
+}
+
+.scroll-top-arrow {
+    display: none;
+}
+
+.ti-arrow-up {
+    display: none;
 }
